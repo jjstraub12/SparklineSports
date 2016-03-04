@@ -86,7 +86,6 @@
     <Content Include="About\Reserve.aspx" />
     <Content Include="About\Submission.aspx" />
     <Content Include="About\UserSurvey.aspx" />
-    <Content Include="ChatRoom.html" />
     <Content Include="css\animate.css" />
     <Content Include="css\carousel.css" />
     <Content Include="css\modal.css" />
