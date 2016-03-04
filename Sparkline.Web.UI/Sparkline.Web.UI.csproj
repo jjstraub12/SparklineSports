@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{21EAE4A6-F2AD-40A0-A69F-4FCDDC093499}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Straub.Web.UI</RootNamespace>
+    <AssemblyName>Straub.Web.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+      </Objects>
+    </PublishDatabaseSettings>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Externals\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\Externals\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Staple.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Externals\Staple.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\Externals\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins">
+      <HintPath>..\Externals\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="About\Reserve.aspx" />
+    <Content Include="About\Submission.aspx" />
+    <Content Include="About\UserSurvey.aspx" />
+    <Content Include="ChatRoom.html" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\carousel.css" />
+    <Content Include="css\modal.css" />
+    <Content Include="css\nav.css" />
+    <Content Include="css\style.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\OpenSans-Regular-webfont.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About\Reserve.aspx.cs">
+      <DependentUpon>Reserve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About\Reserve.aspx.designer.cs">
+      <DependentUpon>Reserve.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About\Submission.aspx.cs">
+      <DependentUpon>Submission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About\Submission.aspx.designer.cs">
+      <DependentUpon>Submission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About\UserSurvey.aspx.cs">
+      <DependentUpon>UserSurvey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About\UserSurvey.aspx.designer.cs">
+      <DependentUpon>UserSurvey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile.aspx.cs">
+      <DependentUpon>Mobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile.aspx.designer.cs">
+      <DependentUpon>Mobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile.Master.cs">
+      <DependentUpon>Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile.Master.designer.cs">
+      <DependentUpon>Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NCAAM\Controls\NcaamSchedule.ascx.cs">
+      <DependentUpon>NcaamSchedule.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NCAAM\Controls\NcaamSchedule.ascx.designer.cs">
+      <DependentUpon>NcaamSchedule.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="NCAAM\Controls\Schedule.ascx.cs">
+      <DependentUpon>Schedule.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NCAAM\Controls\Schedule.ascx.designer.cs">
+      <DependentUpon>Schedule.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="NCAAM\Pages\NcaamLandingPage.aspx.cs">
+      <DependentUpon>NcaamLandingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NCAAM\Pages\NcaamLandingPage.aspx.designer.cs">
+      <DependentUpon>NcaamLandingPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\OpenSans-Regular-webfont.eot" />
+    <Content Include="fonts\OpenSans-Regular-webfont.ttf" />
+    <Content Include="fonts\OpenSans-Regular-webfont.woff" />
+    <Content Include="Default.Master" />
+    <Content Include="img\facebook.png" />
+    <Content Include="img\lbj.webm" />
+    <Content Include="img\SparklineBackground.png" />
+    <Content Include="img\SparklineNameOnly.png" />
+    <Content Include="img\SparklineWhiteFull.png" />
+    <Content Include="img\tripleplay.webm" />
+    <Content Include="img\twitter.png" />
+    <Content Include="Mobile.aspx" />
+    <Content Include="Mobile.Master" />
+    <None Include="Properties\PublishProfiles\DEV.pubxml" />
+    <None Include="Properties\PublishProfiles\DMZ.pubxml" />
+    <None Include="Properties\PublishProfiles\ILSMS-QA.pubxml" />
+    <None Include="Properties\PublishProfiles\ILSMSQA.pubxml" />
+    <None Include="Properties\PublishProfiles\sparklinesports.com - Web Deploy.pubxml" />
+    <Content Include="img\SparklineFullLogo.png" />
+    <Content Include="img\SparklineFullLogoInvert.png" />
+    <Content Include="img\SparklineMiniLogo.png" />
+    <Content Include="img\star.jpg" />
+    <Content Include="img\StraubAnalyticsLogo.png" />
+    <Content Include="js\util.js" />
+    <Content Include="NCAAM\Controls\NcaamSchedule.ascx" />
+    <Content Include="NCAAM\Controls\Schedule.ascx" />
+    <Content Include="NCAAM\Pages\NcaamLandingPage.aspx" />
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sparkline.Core\Sparkline.Core.csproj">
+      <Project>{0dbe8f4c-6d34-4a3a-95f4-5ccea84f5957}</Project>
+      <Name>Sparkline.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sparkline.Data\Sparkline.Data.csproj">
+      <Project>{72f4eaa5-9743-4498-8987-d1aea9b600d1}</Project>
+      <Name>Sparkline.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sparkline.Presenter\Sparkline.Presenter.csproj">
+      <Project>{90f40fee-604c-40ab-a2e3-8a2f2dbdfea4}</Project>
+      <Name>Sparkline.Presenter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v11.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

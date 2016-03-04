@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SJS_NCAAM" Class="ORMDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=pine.arvixe.com;Initial Catalog=SJS_NCAAM;Persist Security Info=True;User ID=SAAdmin" SettingsObjectName="Straub.Data.Properties.Settings" SettingsPropertyName="SJS_NCAAMConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="RawStats.tbl_Schedule" Member="tbl_Schedules">
+    <Type Name="tbl_Schedule" Id="ID1">
+      <Column Name="Season" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TeamId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Gno" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GameDate" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="GameID" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="GameTime" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Network" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="GameType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Loc" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="OppId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Opponent" Storage="_F11" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="WL" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TmScore" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="OppScore" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="OT" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Arena" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="GameDateTime" Type="System.DateTime" CanBeNull="true" />
+      <Column Name="AwayTeamAP" Type="System.Double" CanBeNull="true" />
+      <Column Name="AwayTeamCoach" Type="System.Double" CanBeNull="true" />
+      <Column Name="AwayTeamId" Type="System.String" CanBeNull="true" />
+      <Column Name="AwayTeam" Type="System.String" CanBeNull="true" />
+      <Column Name="AwayConf" Type="System.String" CanBeNull="true" />
+      <Column Name="HomeTeamAP" Type="System.Double" CanBeNull="true" />
+      <Column Name="HomeTeamCoach" Type="System.Double" CanBeNull="true" />
+      <Column Name="HomeTeamId" Type="System.String" CanBeNull="true" />
+      <Column Name="HomeTeam" Type="System.String" CanBeNull="true" />
+      <Column Name="HomeConf" Type="System.String" CanBeNull="true" />
+      <Column Name="Winner" Type="System.String" CanBeNull="true" />
+      <Column Name="WinScore" Type="System.Double" CanBeNull="true" />
+      <Column Name="LoseScore" Type="System.Double" CanBeNull="true" />
+      <Column Name="Favor" Member="Favorite" Storage="_Favor" Type="System.String" CanBeNull="true" />
+      <Column Name="Spread" Type="System.Double" CanBeNull="true" />
+      <Column Name="OverUnder" Type="System.Double" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.NcaamScheduleCollection" Method="NcaamScheduleCollection">
+    <Parameter Name="VariableString" Parameter="variableString" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType IdRef="ID1" />
+  </Function>
+</Database>

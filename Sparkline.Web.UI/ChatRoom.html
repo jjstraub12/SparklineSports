@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Flowchart</title>
+    <meta name="description" content="Interactive flowchart diagram implemented by GoJS in JavaScript for HTML." />
+    <!-- Copyright 1998-2016 by Northwoods Software Corporation. -->
+    <meta charset="UTF-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- Load the utility library -->
+    <script src="https://www.gstatic.com/realtime/realtime-client-utils.js"></script>
+    <!-- Load the Realtime JavaScript library -->
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="../Scripts/GoJs.js"></script>
+    <script src="go.js"></script>
+
+
+
+    <script>
+        var clientId = '1028762369215-dps8uho7v6usr1em4ugtgkl4j0lfpgjl.apps.googleusercontent.com';
+
+        if (!/^([0-9])$/.test(clientId[0])) {
+            alert('Invalid Client ID - did you forget to insert your application Client ID?');
+        }
+        // Create a new instance of the realtime utility with your client ID.
+        var realtimeUtils = new utils.RealtimeUtils({ clientId: clientId });
+
+        authorize();
+
+        function authorize() {
+            // Attempt to authorize
+            realtimeUtils.authorize(function (response) {
+                if (response.error) {
+                    // Authorization failed because this is the first time the user has used your application,
+                    // show the authorize button to prompt them to authorize manually.
+                    var button = document.getElementById('auth_button');
+                    button.classList.add('visible');
+                    button.addEventListener('click', function () {
+                        realtimeUtils.authorize(function (response) {
+                            start();
+                        }, true);
+                    });
+                } else {
+                    start();
+                }
+            }, false);
+        }
+
+        $('#mySavedModel').on('input propertychange paste', function () {
+            load();
+        });
+
+        $('#sample').bind("DOMSubtreeModified", function () {
+            alert('hi');
+        });
+
+        var MOVES_KEY = 'moves';
+        var movesList = [];
+        var flag = "0";
+        function start() {
+
+            // With auth taken care of, load a file, or create one if there
+            // is not an id in the URL.
+            var id = realtimeUtils.getParam('id');
+            if (id) {
+                // Load the document id from the URL
+                realtimeUtils.load(id.replace('/', ''), onFileLoaded, onFileInitialize);
+            } else {
+                // Create a new document, add it to the URL
+                realtimeUtils.createRealtimeFile('New Quickstart File', function (createResponse) {
+                    window.history.pushState(null, null, '?id=' + createResponse.id);
+                    realtimeUtils.load(createResponse.id, onFileLoaded, onFileInitialize);
+                });
+            }
+        }
+
+        // The first time a file is opened, it must be initialized with the
+        // document structure. This function will add a collaborative string
+        // to our model at the root.
+        function onFileInitialize(model) {
+            movesList = [];
+            var string = model.createString();
+            var list = model.createList();
+            //list.addEventListener(gapi.drive.realtime.EventType.OBJECT_CHANGED, onAdded);
+            string.setText('hello');
+            model.getRoot().set(MOVES_KEY, model.createList());
+            model.getRoot().set('demo', string);
+            //model.getRoot().set(MOVES_KEY, string);
+            //alert(model);
+        }
+
+        var wtf;
+        // After a file has been initialized and loaded, we can access the
+        // document. We will wire up the data model to the UI.
+        function onFileLoaded(doc) {
+            var model = doc.getModel();
+            movesList = model.getRoot().get(MOVES_KEY);
+
+            var collaborativeString = doc.getModel().getRoot().get('demo');
+
+            movesList.addEventListener(gapi.drive.realtime.EventType.VALUES_ADDED, onAdded);
+            movesList.addEventListener(gapi.drive.realtime.EventType.VALUES_REMOVED, onAdded);
+            wireTextBoxes(collaborativeString);
+        }
+
+        function onAdded(e) {
+
+            document.getElementById("text_area_Group").value += String.fromCharCode(13) + e.values;
+        }
+        function onRemoved() {
+            document.getElementById("mySavedModel").value = "rem";
+        }
+
+        // Connects the text boxes to the collaborative string
+        function wireTextBoxes(collaborativeString) {
+            var textArea2 = document.getElementById('text_area_Any');
+            gapi.drive.realtime.databinding.bindString(collaborativeString, textArea2);
+        }
+    </script>
+    <script id="code">
+        function init() {
+            var button = document.getElementById('auth_button');
+            button.classList.add('visible');
+        }
+
+        function resetDiagram() {
+            //setTimeout(function () {
+            //    //alert(e.values);
+            //    save();
+            //    //myDiagram.model = go.Model.fromJson(e.values);
+            //}, 10);
+            push();
+        }
+        function push() {
+            movesList.push(document.getElementById("text_area_User").value);
+        }
+        // Show the diagram's model in JSON format that the user may edit
+        function save() {
+            document.getElementById("mySavedModel").value = myDiagram.model.toJson();
+            myDiagram.isModified = false;
+        }
+        function load() {
+            myDiagram.model = go.Model.fromJson(document.getElementById("mySavedModel").value);
+        }
+        // add an SVG rendering of the diagram at the end of this page
+        function makeSVG() {
+            var svg = myDiagram.makeSvg({
+                scale: 0.5
+            });
+            svg.style.border = "1px solid black";
+            obj = document.getElementById("SVGArea");
+            obj.appendChild(svg);
+            if (obj.children.length > 0) {
+                obj.replaceChild(svg, obj.children[0]);
+            }
+        }
+    </script>
+</head>
+<body onload="init()">
+    <div id="sample">
+        <label>Group</label>
+        <textarea style="width:500px; height:500px" id="text_area_Group"></textarea>
+        <br />
+        <br />
+        <label>All</label>
+        <textarea style="width:500px; height:100px" id="text_area_Any"></textarea>
+        <br />
+        <br />
+        <label>User</label>
+        <textarea style="width:500px; height:100px" id="text_area_User"></textarea>
+        <button id="Push" onclick="push()">Send</button>
+        <button id="auth_button" >Authorize</button>
+
+    </div>
+</body>
+</html>

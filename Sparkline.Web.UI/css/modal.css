@@ -1,0 +1,127 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/* Modal Popup */
+.modalForm, .templateInput, .confirmRemoveTemplate, .modalCharts{
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	position:absolute;
+	width: 100%;
+	z-index:1001;
+	}
+
+.modalForm{
+	background: #000;
+	filter: alpha(opacity=70);
+	height: 100%;
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+	text-align: center;
+	position: fixed;
+	z-index: 1000;
+	}
+
+.loader{
+	height: auto;
+	position: fixed;
+	width: 1060px;
+	}
+	
+.noticeBig{
+	height: auto;
+	position: fixed;
+	width: 1060px;
+	}
+
+.modalContent{
+	background: #FFF;
+	border: 5px solid #BB0404;
+	float: left;
+	padding: 10px;
+	position: relative;
+	width: 940px;
+	}
+	
+.modalCharts .modalContentContainer{height: 500px !important;}
+.modalContentContainer{
+	position: relative;
+	max-height: 500px !important;
+	overflow: auto;
+	overflow-x: hidden;
+	}
+	
+	
+.close{
+	position: absolute;
+	margin: -20px -20px 0px 0px;
+	top: 0;
+	right: 0;
+	}
+	
+h4{
+	display: inline;
+    background-color:midnightblue;
+    color: whitesmoke;
+    text-align:center;
+	margin: 5px 0px 0px 10px;
+    width:100%;
+	}
+
+.heading img{
+	float: left;
+	}
+	
+.listPermissions label{
+	font-weight: bold;
+	padding: 4px 10px 1px;
+	}
+	
+.listPermissions ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	}
+	
+.listPermissions ul li{
+	float: left;
+	margin: 5px 0px 0px 20px;
+	width: 30%
+	}
+	
+.listPermissions ul li label{
+	font-weight: normal;
+	padding: 0px;
+	}
+
+.style_user_selection_header_textbox {
+        text-align: center !important;
+        font-weight: bold !important;
+        width: 100% !important;
+    }
+
+
+.style_checkboxdiv input[type=checkbox] {
+    margin-left: 15px;
+}
+
+.style_checkboxdiv label {
+    font-family:Helvetica,"Segoe UI",Arial,sans-serif;
+    font-size: 12px;
+    text-shadow: none;
+}
+
+.label {
+  background-color: #d1dade;
+  color: #5e5e5e;
+  font-family: Helvetica,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  padding: 3px 8px;
+  text-shadow: none;
+}    
+  
+
+.gray-texture-bg {
+  background: #F8F8F8 url(../img/theme/bkgd_body.png) top left;
+}

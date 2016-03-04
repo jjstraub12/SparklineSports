@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Mobile.master.cs" Inherits="Straub.Web.UI.Mobile" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="icon" href="img/SparklineMiniLogo.png" />
+    <style>
+        html, body, form {
+            margin: 0;
+            height: 100%;
+        }
+        .textResponse {
+            font-size: 7vw;
+            color: white;
+            font-family: 'Agency FB';
+        }
+        #container {
+            width: 100%; 
+            height: 100%; 
+            margin: auto; 
+            text-align: center; 
+            background-image: url(/img/SparklineBackground.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        #follow {
+            margin-top: 40%;
+            height: 15%;
+            width: 100%;
+        }
+    </style>
+
+    <title>SPARKLINE</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%--<div id="android" style="width: 360px; height: 640px; margin: auto; border: 1px solid black; margin-top: 100px;">--%>
+            <div id="container">
+                <img src="img/SparklineWhiteFull.png" style="width: 85%; margin: auto; margin-top: 5%" />
+                <div style="text-align: center; margin-top: 6%;">
+                    <asp:Label ID="lblStayTuned" runat="server" Text="Mobile Site Under Construction." CssClass="textResponse"></asp:Label>
+                </div>
+                <div id="follow">
+                    <asp:Label ID="lblFollowUs" runat="server" Text="Follow Us On:" CssClass="textResponse"></asp:Label>
+                    <br />
+                    <asp:ImageButton ID="imgTwitter" runat="server" ImageUrl="~/img/twitter.png" PostBackUrl="https://www.twitter.com/SparklineSports" Style="height: 18%; margin-right: 5%; margin-top: 5%"/>
+                    <img src="img/facebook.png" style="height: 18%; margin-left: 5%; margin-top: 5%"/>
+                </div>
+            </div>
+        <%--</div>--%>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
