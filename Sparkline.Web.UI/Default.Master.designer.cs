@@ -10,7 +10,7 @@
 namespace Straub.Web.UI {
     
     
-    public partial class Default1 {
+    public partial class Master {
         
         /// <summary>
         /// head control.
@@ -31,15 +31,6 @@ namespace Straub.Web.UI {
         protected global::System.Web.UI.WebControls.ImageButton imgHome;
         
         /// <summary>
-        /// main control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl main;
-        
-        /// <summary>
         /// ContentPlaceHolder1 control.
         /// </summary>
         /// <remarks>
@@ -47,14 +38,5 @@ namespace Straub.Web.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
-        
-        /// <summary>
-        /// divCarousel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCarousel;
     }
 }

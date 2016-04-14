@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Construction.master.cs" Inherits="Straub.Web.UI.Construction" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+
+        <title>Sparkline Sports</title>
+        <link rel="icon" href="img/SparklineMiniLogo.png" />
+        <link href="css/nav.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/countdownStyles.css" />
+
+        <style>
+            body {
+                width: 100%; 
+                height: 100%; 
+                margin: auto; 
+                text-align: center; 
+                background-image: url(/img/water-background.jpg);
+                background-repeat: repeat;
+                background-size: 300px 300px;
+                font-family: 'Agency FB';
+                font-weight: bold;
+            }
+            #main {
+                max-width: 1000px;
+                min-width: 500px;
+                margin: auto;
+                background-color: white;
+            }
+
+            .centerCountdown {
+                width: 100%;
+                position: fixed;
+                left: 50%;
+                top: 40%;
+                transform: translate(-50%,-40%);
+                z-index:10000;
+            }
+        </style>
+
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+    </head>
+    <body>
+        <form runat="server">
+            <div class="centerCountdown">
+                <div style="background-color: black; height: 25vh;">
+                    <object type="image/svg+xml" data="img/SPARKLINE_FULL.svg" style="height: 100%;">Your browser does not support SVG</object>
+                </div>
+                <div style="height: 12vw;">
+
+                </div>
+                <div class="countdown styled"></div>
+            </div>
+
+            <div id="main" runat="server" style="margin-top: 10vw;">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+
+        <!--Scripts-->
+        <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script> 
+        <script type="text/javascript" src="js/jquery.countdown.js"></script>
+        <script type="text/javascript" src="js/global.js"></script>
+    </body>
+</html>

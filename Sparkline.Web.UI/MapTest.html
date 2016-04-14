@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+    <p id="demo">Test For Upcoming Kansas vs Maryland Tournament Game</p>
+    <p>Game is being played in Louisville, KY</p>
+
+    <p>TEAM 1</p>
+    <input type="text" name="team1" value="air-force" />
+
+    <p>TEAM 2</p>
+    <input type="text" name="team2" value="abilene-christian" />
+
+    <p>Click button to test</p>
+    <button onclick="passValues()">Try It</button>
+
+    <div id="mapholder"></div>
+
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false&amp;libraries=geometry"></script>
+    <script src="http://www.geocodezip.com/scripts/v3_epoly.js"></script>
+    <script src="js/maps.js"></script>
+    <script src="js/teams.js"></script>
+    <script src="js/stadiums.js"></script>
+
+    <script>
+        function passValues() {
+            var e1 = document.getElementsByName('team1')[0];
+            team1 = e1.value;
+
+            var e2 = document.getElementsByName('team2')[0];
+            team2 = e2.value;
+
+            stadium = 'kfc-yum-center';
+
+            showPosition(team1, team2, stadium);
+        }
+    </script>
+
+</body>
+</html>

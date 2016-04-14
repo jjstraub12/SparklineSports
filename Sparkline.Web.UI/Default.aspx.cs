@@ -6,13 +6,17 @@ namespace Straub.Web.UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.Browser["IsMobileDevice"] == "true")
-            {
-                Response.Redirect("Mobile.aspx");
-            }
+            //REMOVE THIS AT LAUNCH
+            Response.Redirect("About.aspx");
+
+            //if (Request.Browser["IsMobileDevice"] == "true")
+            //{
+            //    Response.Redirect("Mobile.aspx");
+            //}
 
             if (!IsPostBack)
                 Session["GameDate"] = string.Format("{0:d}", DateTime.Now);
+
         }
     }
 }

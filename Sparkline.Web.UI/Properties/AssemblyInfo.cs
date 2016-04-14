@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ILSMS.Web.UI")]
+[assembly: AssemblyTitle("Straub.Web.UI")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Wyle")]
-[assembly: AssemblyProduct("ILSMS.Web.UI")]
-[assembly: AssemblyCopyright("Copyright © Wyle 2015")]
+[assembly: AssemblyCompany("Sparkline Sports")]
+[assembly: AssemblyProduct("Sparkline Sports")]
+[assembly: AssemblyCopyright("Copyright © Sparkline Sports 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

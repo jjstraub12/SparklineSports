@@ -7,18 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Straub.Web.UI
 {
-    public partial class Default1 : System.Web.UI.MasterPage
+    public partial class Master : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Page.Title == "Sparkline - HOME")
-            {
-                divCarousel.Visible = true;
-            }
-            else
-            {
-                divCarousel.Visible = false;
-            }
+
         }
     }
 }
