@@ -216,20 +216,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Sparkline.Core\Sparkline.Core.csproj">
-      <Project>{0dbe8f4c-6d34-4a3a-95f4-5ccea84f5957}</Project>
-      <Name>Sparkline.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sparkline.Data\Sparkline.Data.csproj">
-      <Project>{72f4eaa5-9743-4498-8987-d1aea9b600d1}</Project>
-      <Name>Sparkline.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sparkline.Presenter\Sparkline.Presenter.csproj">
-      <Project>{90f40fee-604c-40ab-a2e3-8a2f2dbdfea4}</Project>
-      <Name>Sparkline.Presenter</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup />

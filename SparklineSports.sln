@@ -3,19 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Executables", "Executables", "{3936AC97-5FF4-46B1-95ED-E65C2DD5FCCE}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assemblies", "Assemblies", "{0A22C522-E59F-47A1-930A-D82573962790}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Automated Tests", "Automated Tests", "{BAB7401F-16DF-4BE8-8DF9-7A71213D71DF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sparkline.Core", "Sparkline.Core\Sparkline.Core.csproj", "{0DBE8F4C-6D34-4A3A-95F4-5CCEA84F5957}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sparkline.Data", "Sparkline.Data\Sparkline.Data.csproj", "{72F4EAA5-9743-4498-8987-D1AEA9B600D1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sparkline.Web.UI", "Sparkline.Web.UI\Sparkline.Web.UI.csproj", "{21EAE4A6-F2AD-40A0-A69F-4FCDDC093499}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sparkline.Presenter", "Sparkline.Presenter\Sparkline.Presenter.csproj", "{90F40FEE-604C-40AB-A2E3-8A2F2DBDFEA4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "..\..\..\Desktop\SPARKLINE_WEBSITE\SparklineSportsSite\WebApplication1\WebApplication1.csproj", "{B724DEE6-5777-47B9-AA92-B79A208B264E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,30 +11,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0DBE8F4C-6D34-4A3A-95F4-5CCEA84F5957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0DBE8F4C-6D34-4A3A-95F4-5CCEA84F5957}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0DBE8F4C-6D34-4A3A-95F4-5CCEA84F5957}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0DBE8F4C-6D34-4A3A-95F4-5CCEA84F5957}.Release|Any CPU.Build.0 = Release|Any CPU
-		{72F4EAA5-9743-4498-8987-D1AEA9B600D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{72F4EAA5-9743-4498-8987-D1AEA9B600D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{72F4EAA5-9743-4498-8987-D1AEA9B600D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{72F4EAA5-9743-4498-8987-D1AEA9B600D1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{21EAE4A6-F2AD-40A0-A69F-4FCDDC093499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21EAE4A6-F2AD-40A0-A69F-4FCDDC093499}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21EAE4A6-F2AD-40A0-A69F-4FCDDC093499}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21EAE4A6-F2AD-40A0-A69F-4FCDDC093499}.Release|Any CPU.Build.0 = Release|Any CPU
-		{90F40FEE-604C-40AB-A2E3-8A2F2DBDFEA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{90F40FEE-604C-40AB-A2E3-8A2F2DBDFEA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90F40FEE-604C-40AB-A2E3-8A2F2DBDFEA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{90F40FEE-604C-40AB-A2E3-8A2F2DBDFEA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B724DEE6-5777-47B9-AA92-B79A208B264E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B724DEE6-5777-47B9-AA92-B79A208B264E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B724DEE6-5777-47B9-AA92-B79A208B264E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B724DEE6-5777-47B9-AA92-B79A208B264E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{0DBE8F4C-6D34-4A3A-95F4-5CCEA84F5957} = {0A22C522-E59F-47A1-930A-D82573962790}
-		{72F4EAA5-9743-4498-8987-D1AEA9B600D1} = {0A22C522-E59F-47A1-930A-D82573962790}
-		{21EAE4A6-F2AD-40A0-A69F-4FCDDC093499} = {3936AC97-5FF4-46B1-95ED-E65C2DD5FCCE}
-		{90F40FEE-604C-40AB-A2E3-8A2F2DBDFEA4} = {0A22C522-E59F-47A1-930A-D82573962790}
 	EndGlobalSection
 EndGlobal
